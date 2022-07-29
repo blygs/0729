@@ -1,6 +1,7 @@
 
 public class DoWhileDemo {
 	public static void main(String[] args) {
+		
 		for(int i = 1; i < 11; i++) {
 			System.out.print(i + "\t");
 		}
@@ -14,6 +15,7 @@ public class DoWhileDemo {
 		}
 		System.out.println();	System.out.println();
 		
+
 		int j = 1;
 		do {
 			System.out.print(j + "\t");
