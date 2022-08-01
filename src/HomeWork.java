@@ -9,21 +9,8 @@ public class HomeWork {
 		
 		int line = n / 2;
 		
-		for(int i = 1; i<= line; i++) {
-			int space = line - i; 
-			if(n % 2 == 1) {
-				spaceprint();
-			}
-			for(int j = 0; j < line; j++) {
-				
-				if(j < space) {
-					spaceprint();
-				}
-				else {
-					starprint();
-				}
-			}
-			System.out.println();
+		for(int i = 1; i<= line; i++) { 
+			doPrint(n, line, i);
 		}
 		
 		// 홀수일 경우 제일 중간 줄
@@ -35,19 +22,7 @@ public class HomeWork {
 		}
 		
 		for(int i = line; i>= 1; i--) {
-			int space = line - i;
-			if(n % 2 == 1) {
-				spaceprint();
-			}
-			for(int j = 0; j < line; j++) {
-				if(j < space) {
-					spaceprint();
-				}
-				else {
-					starprint();
-				}
-			}
-			System.out.println();
+			doPrint(n, line, i);
 		}
 	}
 	
@@ -57,5 +32,22 @@ public class HomeWork {
 	}
 	static void starprint() {
 		System.out.print("*      ");
+	}
+	
+	static void doPrint(int n, int line, int i) {
+		int space = line - i;
+		
+		if(n % 2 == 1) {
+			spaceprint();
+		}
+		for(int j = 0; j < line; j++) {
+			if(j < space) {
+				spaceprint();
+			}
+			else {
+				starprint();
+			}
+		}
+		System.out.println();
 	}
 }
